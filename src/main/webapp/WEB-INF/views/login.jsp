@@ -9,6 +9,6 @@
 <body>
 	<h2>Welcome to Bangladesh Website</h2>
 	<h3>Please login to your account</h3>
-	<b>If you do not have any account, please go to <a href="home-page">registration page</a></b>
+	<b>If you do not have any account, please go to <a href="home-page">registration page please</a></b>
 </body>
 </html>
