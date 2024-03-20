@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Entity
 @Table(name = "orm_user")
