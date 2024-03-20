@@ -39,8 +39,8 @@ public class MainController {
 		System.out.println("User registration method called");
 		
 		userService.registerUser(user);
-		model.addAttribute("msg", "Registration success!");
+		model.addAttribute(user);
 		
-		return  "registration";
+		return  "success";
 	}
 }
