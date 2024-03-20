@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.rupcharcha.entity.User;
-import com.rupcharcha.service.UserService;
+import com.rupcharcha.orm.entity.User;
+import com.rupcharcha.orm.service.UserService;
 
 @Controller
 public class MainController {
@@ -38,6 +38,7 @@ public class MainController {
 	public String registerUser(@ModelAttribute User user, @RequestParam("name") String nm, Model model) {
 		System.out.println("User registration method called");
 		
+		userService.saveUser(user);
 		System.out.println(user);
 		
 		return  "success";
