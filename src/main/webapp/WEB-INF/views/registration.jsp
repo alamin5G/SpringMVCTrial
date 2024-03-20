@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -32,6 +33,7 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card bg-success text-white rounded">
 					<div class="card-header text-center fs-3">Registration Form</div>
+					<b class="fs-bol text-center pt-1 bg-warning">${msg }</b>
 					<div class="card-body">
 						<form action="createUser" method="post">
 							<div class="mb-3">

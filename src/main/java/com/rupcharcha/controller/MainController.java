@@ -2,6 +2,7 @@ package com.rupcharcha.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,11 +35,12 @@ public class MainController {
 	}
 	
 	@RequestMapping(path = "/createUser", method= RequestMethod.POST)
-	public String registerUser(@ModelAttribute User user, @RequestParam("name") String nm) {
+	public String registerUser(@ModelAttribute User user, @RequestParam("name") String nm, Model model) {
 		System.out.println("User registration method called");
 		
 		userService.registerUser(user);
+		model.addAttribute("msg", "Registration success!");
 		
-		return  "success";
+		return  "registration";
 	}
 }
