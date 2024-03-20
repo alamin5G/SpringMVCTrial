@@ -1,5 +1,6 @@
 package com.rupcharcha.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,10 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rupcharcha.entity.User;
+import com.rupcharcha.service.UserService;
 
 @Controller
 public class MainController {
 
+	@Autowired
+	private UserService userService;
+	
 	@RequestMapping("/home-page")
 	public String homePage() {
 		
@@ -32,9 +37,8 @@ public class MainController {
 	public String registerUser(@ModelAttribute User user, @RequestParam("name") String nm) {
 		System.out.println("User registration method called");
 		
-		System.out.println("Your name is: " + nm);
-		System.out.println(user);
+		userService.registerUser(user);
 		
-		return  "registration";
+		return  "success";
 	}
 }

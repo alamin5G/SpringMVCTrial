@@ -1,13 +1,21 @@
 package com.rupcharcha.service;
 
-import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.rupcharcha.dao.UserDao;
+import com.rupcharcha.entity.User;
+
+@Service
 public class UserServiceImpl implements UserService{
 
+	@Autowired
+	private UserDao userDao;
+	
 	@Override
-	public int registerUser(com.rupcharcha.entity.User user) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int registerUser(User user) {
+		int i = userDao.saveuser(user);
+		return i;
 	}
 
 }
