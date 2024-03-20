@@ -38,8 +38,7 @@ public class MainController {
 	public String registerUser(@ModelAttribute User user, @RequestParam("name") String nm, Model model) {
 		System.out.println("User registration method called");
 		
-		userService.registerUser(user);
-		model.addAttribute(user);
+		System.out.println(user);
 		
 		return  "success";
 	}
