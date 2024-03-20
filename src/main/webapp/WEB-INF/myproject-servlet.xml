@@ -14,7 +14,7 @@
     http://www.springframework.org/schema/tx 
     http://www.springframework.org/schema/tx/spring-tx.xsd">     
   
-  <context:component-scan base-package="com.rupcharcha.controller"/>
+  <context:component-scan base-package="com.rupcharcha"/>
   
   <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
   	<property name="prefix" value="/WEB-INF/views/"/>
@@ -25,7 +25,7 @@
    		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
    		<property name="url" value="jdbc:mysql://localhost:3306/springmvc"/>
    		<property name="username" value="root"/>
-   		<property name="pasword" value="252646"/>
+   		<property name="password" value="252646"/>
    </bean>
    <bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
    	<property name="dataSource" ref="dataSource"/>
